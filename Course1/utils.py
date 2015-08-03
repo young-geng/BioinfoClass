@@ -573,15 +573,30 @@ def GibbsSamplerMotifSearch(text_list, k, t, num_iterations, num_restarts):
 
 
 def ReadLineStripped():
+  """Read a non empty line from stdin with leading and training spaces stripped.
+
+  Returns:
+    A string.
+  """
   line = ''
   while len(line) == 0:
     line = stdin.readline().strip()
   return line
 
 def ReadIntegers():
+  """Read a list of integers from stdin.
+
+  Returns:
+    A list of integers
+  """
   return map(int, ReadLineStripped().split())
 
 def ReadAllLines():
+  """Read all non-empty lines from stdin.
+
+  Returns:
+    A list of strings.
+  """
   lines = []
   for line in stdin:
     if len(line.strip()) == 0:
@@ -590,12 +605,16 @@ def ReadAllLines():
   return lines
 
 def PrintList(l, delimiter=' '):
+  """Write a list of elements to stdout, delimited by delimiter.
+  """
   for elem in l:
     stdout.write(('{}' + delimiter).format(elem))
   if delimiter != '\n':
     stdout.write('\n')
 
 def Print(elem):
+  """Write an element to stdout and a new line.
+  """
   stdout.write('{}\n'.format(elem))
 
 
