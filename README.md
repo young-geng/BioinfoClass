@@ -1,0 +1,2 @@
+# BioinfoClass
+Coursera bioinformatics class
